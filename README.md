@@ -1,3 +1,4 @@
 # golang-test
 
-go version: 1.16.3
+Bazel: 4.0.0
+Golang: 1.16.2

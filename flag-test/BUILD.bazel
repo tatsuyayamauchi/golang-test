@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "flag-test_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/tatsuyayamauchi/golang-test/flag-test",
+    visibility = ["//visibility:private"],
+    deps = ["@com_github_spf13_pflag//:go_default_library"],
+)
+
+go_binary(
+    name = "flag-test",
+    embed = [":flag-test_lib"],
+    visibility = ["//visibility:public"],
+)

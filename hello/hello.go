@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/tatsuyayamauchi/golang-test/subpkg1"
 	"fmt"
+
+	"github.com/tatsuyayamauchi/golang-test/hello/subpkg1"
 )
 
 func main() {
