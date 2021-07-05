@@ -3,5 +3,5 @@ update-bazel:
 
 .PHONY: test
 test:
-	bazelisk test //... --sandbox_debug --test-outputs=errors --verbose_failuers --buiid_tests_only
+	bazelisk test //... --sandbox_debug --test_output=errors --verbose_failures --build_tests_only
 
