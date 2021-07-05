@@ -3,4 +3,5 @@ load("//build/rules/go:vendor.bzl", "go_vendor")
 
 # gazelle:prefix github.com/tatsuyayamauchi/golang-test
 gazelle(name = "gazelle")
+
 go_vendor(name = "vendor")

@@ -1,4 +1,4 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_context", "go_rule")
+load("@io_bazel_rules_go//go:def.bzl", "go_context")
 load("@bazel_skylib//lib:shell.bzl", "shell")
 
 def _go_vendor(ctx):
@@ -14,14 +14,13 @@ def _go_vendor(ctx):
         substitutions = substitutions,
         is_executable = True,
     )
-    runfiles = ctx.runfiles(files = [go.go, ctx.executable._gazelle])
     return [
         DefaultInfo(
-            runfiles = runfiles,
+            runfiles = ctx.runfiles(files = [go.go, ctx.executable._gazelle]),
             executable = out,
         ),
     ]
-go_vendor = go_rule(
+go_vendor = rule(
     implementation = _go_vendor,
     executable = True,
     attrs = {

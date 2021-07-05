@@ -1,4 +1,5 @@
 filegroup(
+    name = "go_vendor",
     srcs = ["vendor.bash"],
     visibility = ["//visibility:public"],
 )
